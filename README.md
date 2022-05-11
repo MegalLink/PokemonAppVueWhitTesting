@@ -4,7 +4,13 @@
 
 https://pokeapi.co
 
+## Install Axios
+
+npm i axios
+
 ## Project setup
+
+## Install
 
 ```
 npm install
