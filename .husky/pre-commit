@@ -8,26 +8,26 @@ ENDCOLOR="\e[0m"
 echo "Running pre-commit"
 echo "Running format..."
 format=$(npm run format)
-if [[-n ${format}]]; then
-    printf "${RED}something when wrong formating files:${ENDCOLOR}\n"
-    echo "${format}"
-    exit 1
+if [ $? -eq 0 ]; then
+   printf "${GREEN} format success ${ENDCOLOR}\n"
+else
+   printf "${RED} format have failed ${ENDCOLOR}\n"
+   echo "${format}" 
 fi
-
 echo "Running lint..."
-lint=$(npm run lint )
-if [[-n ${format}]]; then
-    printf "${RED}something when wrong running linter in files:${ENDCOLOR}\n"
-    echo "${format}"
-    exit 1
+lint=$(npm run lint)
+if [ $? -eq 0 ]; then
+   printf "${GREEN} lint success ${ENDCOLOR}\n"
+else
+   printf "${YELLOW} lint have failed ${ENDCOLOR}\n"
+   echo "${lint}" 
 fi
-
 echo "Running unit test..."
 test=$(npm run test:unit)
-if [[-n ${format}]]; then
-    printf "${RED}something when wrong running unit test:${ENDCOLOR}\n"
-    echo "${test}"
-    exit 1
+if [ $? -eq 0 ]; then
+   printf "${GREEN} unit tests success all files covered${ENDCOLOR}\n"
+else
+   printf "${RED} unit tests have failed ${ENDCOLOR}\n"
+   echo "${test}" 
 fi
-
 git add -A .
