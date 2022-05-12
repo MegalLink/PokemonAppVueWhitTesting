@@ -8,6 +8,20 @@ https://pokeapi.co
 
 npm i axios
 
+## Install Husky
+
+npm install husky
+
+## Enable git hooks
+
+npx husky install
+npm set-script prepare "husky install"
+npx husky add .husky/pre-commit "npm test"
+
+## Install Prettier
+
+npm install prettier --save-dev
+
 ## Project setup
 
 ## Install
