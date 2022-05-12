@@ -1,6 +1,5 @@
 import getPokemonOptions from "@/helpers/getPokemonOptions";
 import pokemonApi from "@/api/pokemonApi";
-import { assert } from "@vue/compiler-core";
 
 let apiSpy;
 
@@ -15,7 +14,6 @@ describe("getPokemonOptions", () => {
     apiSpy.mockResolvedValue({ data: data });
 
     const res = await getPokemonOptions();
-    console.log(res);
     expect(res).toStrictEqual([data, data, data, data]);
   });
 });

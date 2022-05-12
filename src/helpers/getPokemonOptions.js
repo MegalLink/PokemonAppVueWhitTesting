@@ -5,7 +5,7 @@ const getPokemons = () => {
   return pokemonsArr.map((_, index) => index + 1);
 };
 
-const getPokemonNames = async ([a, b, c, d] = []) => {
+const getPokemonNames = async ([a, b, c, d]) => {
   const promisesArr = [
     pokemonApi.get(`/${a}`),
     pokemonApi.get(`/${b}`),

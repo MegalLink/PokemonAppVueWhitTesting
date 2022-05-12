@@ -13,6 +13,7 @@
 </template>
 <script>
 export default {
+  //LA emicion es un array de datos [pokemon.id, otherValue] si mandamos mas datos seria con ,
   props: {
     pokemons: {
       type: Array,

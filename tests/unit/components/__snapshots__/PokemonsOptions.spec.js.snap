@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonPicture Component Tests Should match snapshot 1`] = `
+<div class="container-options">
+  <ul>
+    <li>pikachu</li>
+    <li>sevaiper</li>
+    <li>ponyta</li>
+    <li>huevofet</li>
+  </ul>
+</div>
+`;
